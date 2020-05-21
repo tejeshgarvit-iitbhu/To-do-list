@@ -99,7 +99,7 @@ app.post("/delete",function(req,res){
   const checkedItem=req.body.checkbox;
   const checkedList=req.body.listName;
   console.log(checkedList);
-  if(checkedList===date.getDate()){
+  if(checkedList===date.getDay()){
     Item.deleteOne({_id:checkedItem},function(err){
       if(err)console.log(err);
       else res.redirect('/');
